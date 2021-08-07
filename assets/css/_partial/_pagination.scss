@@ -32,9 +32,9 @@
       color: $pagination-link-hover-color;
     }
 
-    [theme=dark] &:hover a {
+    @media (prefers-color-scheme: dark){ &:hover a {
       color: $pagination-link-hover-color-dark;
-    }
+    }}
 
     &:before,
     &:after {
@@ -47,10 +47,10 @@
       bottom: 0px;
     }
 
-    [theme=dark] &:before,
-    [theme=dark] &:after {
+    @media (prefers-color-scheme: dark){ &:before,
+     &:after {
       background: $pagination-link-hover-color-dark;
-    }
+    }}
 
     &:before .active,
     &:after .active {
@@ -78,9 +78,9 @@
         color: $pagination-link-hover-color;
       }
 
-      [theme=dark] & a {
+      @media (prefers-color-scheme: dark){& a {
         color: $pagination-link-hover-color-dark;
-      }
+      }}
 
       &:before,
       &:after {

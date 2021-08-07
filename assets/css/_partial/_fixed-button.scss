@@ -26,7 +26,7 @@
     outline: none;
   }
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark){ & {
     color: $global-font-secondary-color-dark;
     background: $header-background-color-dark;
 
@@ -34,7 +34,7 @@
       color: $global-font-color-dark;
     }
   }
-}
+}}
 
 #back-to-top {
   display: block;

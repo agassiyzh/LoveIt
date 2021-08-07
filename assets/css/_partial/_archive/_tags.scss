@@ -19,9 +19,9 @@
     sup {
       color: $global-font-secondary-color;
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark) {& {
         color: $global-font-secondary-color-dark;
-      }
+      }}
     }
   }
 }

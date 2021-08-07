@@ -58,13 +58,13 @@
     background-color: transparent;
   }
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark) {& {
     color: $global-link-color-dark;
 
     &:hover {
       color: $global-link-hover-color-dark;
     }
-  }
+  }}
 }
 
 .archive-item-date {
@@ -72,9 +72,9 @@
   text-align: right;
   color: $global-font-secondary-color;
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark){ & {
     color: $global-font-secondary-color-dark;
-  }
+  }}
 }
 
 .more-post {

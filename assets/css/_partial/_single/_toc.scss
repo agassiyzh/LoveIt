@@ -19,9 +19,9 @@
         margin-right: .5rem;
         color: $single-link-color;
 
-        [theme=dark] & {
+        @media (prefers-color-scheme: dark){ & {
           color: $single-link-color-dark;
-        }
+        }}
       }
 
       ul {
@@ -37,13 +37,13 @@
       color: $global-font-secondary-color;
     }
 
-    [theme=dark] & {
+    @media (prefers-color-scheme: dark){ & {
       background: $code-background-color-dark;
 
       rt {
         color: $global-font-secondary-color-dark;
       }
-    }
+    }}
   }
 }
 
@@ -66,9 +66,9 @@
 
   @include blur;
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark){ & {
     border-left-color: $global-border-color-dark;
-  }
+  }}
 
   .toc-title {
     margin: .8rem 0;
@@ -97,16 +97,16 @@
       font-weight: bold;
       color: $single-link-color;
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){ & {
         color: $single-link-color-dark;
-      }
+      }}
 
       &::before {
         color: $single-link-hover-color;
 
-        [theme=dark] & {
+        @media (prefers-color-scheme: dark){& {
           color: $single-link-hover-color-dark;
-        }
+        }}
       }
     }
   }
@@ -127,9 +127,9 @@
     padding: 0 .75rem;
     background: darken($code-background-color, 6%);
 
-    [theme=dark] & {
+    @media (prefers-color-scheme: dark){ & {
       background: darken($code-background-color-dark, 6%);
-    }
+    }}
   }
 
   .toc-content {
@@ -140,18 +140,18 @@
       padding: .4rem 1rem .4rem 1.8rem;
     }
 
-    [theme=dark] & {
+    @media (prefers-color-scheme: dark){ & {
       background-color: $code-background-color-dark;
-    }
+    }}
   }
 
   &.open {
     .toc-title {
       background: darken($code-background-color, 3%);
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){ & {
         background: darken($code-background-color-dark, 3%);
-      }
+      }}
     }
   }
 }

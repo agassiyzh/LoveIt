@@ -1,0 +1,14 @@
+blockquote {
+    display: inherit;
+    border-left: .5rem solid $blockquote-color;
+    background-color: rgba($blockquote-color, .2);
+    padding: .25rem .75rem;
+    margin: 1rem 0;
+
+    @media (prefers-color-scheme: dark) {
+        & {
+            border-left-color: $blockquote-color-dark;
+            background-color: rgba($blockquote-color-dark, .2);
+        }
+    }
+}

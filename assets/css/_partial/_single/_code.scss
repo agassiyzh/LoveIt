@@ -8,9 +8,9 @@ code {
   font-family: $code-font-family;
   color: $code-color;
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark){ & {
     color: $code-color-dark;
-  }
+  }}
 }
 
 pre {
@@ -32,9 +32,9 @@ pre {
 code, pre, .highlight table, .highlight tr, .highlight td {
   background: $code-background-color;
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark){ & {
     background: $code-background-color-dark;
-  }
+  }}
 }
 
 .highlight, .gist {
@@ -72,10 +72,10 @@ code, pre, .highlight table, .highlight tr, .highlight td {
       color: $code-info-color;
       background: darken($code-background-color, 8%);
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){ & {
         color: $code-info-color-dark;
         background: darken($code-background-color-dark, 6%);
-      }
+      }}
 
       &:hover {
         cursor: pointer;
@@ -119,17 +119,17 @@ code, pre, .highlight table, .highlight tr, .highlight td {
       display: block;
       background-color: darken($code-background-color, 10%);
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){ & {
         background-color: darken($code-background-color-dark, 5%);
-      }
+      }}
     }
 
     .ln, .lnt {
       color: $global-font-secondary-color;
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){& {
         color: $global-font-secondary-color-dark;
-      }
+      }}
     }
 
     .arrow {
@@ -149,9 +149,9 @@ code, pre, .highlight table, .highlight tr, .highlight td {
         cursor: pointer;
         color: $global-link-hover-color;
 
-        [theme=dark] & {
+        @media (prefers-color-scheme: dark){ & {
           color: $global-link-hover-color-dark;
-        }
+        }}
       }
     }
 
@@ -165,9 +165,9 @@ code, pre, .highlight table, .highlight tr, .highlight td {
       .code-header {
         background: darken($code-background-color, 3%);
 
-        [theme=dark] & {
+        @media (prefers-color-scheme: dark){ & {
           background: darken($code-background-color-dark, 3%);
-        }
+        }}
       }
 
       .table-wrapper {
@@ -202,11 +202,11 @@ code, pre, .highlight table, .highlight tr, .highlight td {
     .#{$class} { color: $color; }
   }
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark){ & {
     @each $class, $color in $code-highlight-color-map-dark {
       .#{$class} { color: $color; }
     }
-  }
+  }}
 }
 
 .gist {
@@ -220,12 +220,12 @@ code, pre, .highlight table, .highlight tr, .highlight td {
 
     @include link(false, false);
 
-    [theme=dark] & {
+    @media (prefers-color-scheme: dark){ & {
       background-color: darken($code-background-color-dark, 5%);
-    }
+    }}
   }
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark) {& {
     // imported from https://github.com/lonekorean/gist-syntax-themes/blob/master/stylesheets/one-dark.css
     .highlight {
       background: #141414;
@@ -381,5 +381,5 @@ code, pre, .highlight table, .highlight tr, .highlight td {
     .pl-mdi {
         color: #df6b75;
     }
-  }
+  }}
 }

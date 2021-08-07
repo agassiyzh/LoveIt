@@ -24,9 +24,9 @@ html {
 ::selection {
   background-color: $selection-color;
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark){& {
     background-color: $selection-color-dark;
-  }
+  }}
 }
 
 body {
@@ -35,10 +35,10 @@ body {
   @include overflow-wrap(break-word);
   scrollbar-color: auto;
 
-  &[theme=dark] {
+  @media (prefers-color-scheme: dark){ &{
     color: $global-font-color-dark;
     background-color: $global-background-color-dark;
-  }
+  }}
 }
 
 @include ms;

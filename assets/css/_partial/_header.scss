@@ -4,9 +4,9 @@ header {
   background-color: $header-background-color;
   @include transition(box-shadow 0.3s ease);
 
-  [theme=dark] & {
+  @media (prefers-color-scheme: dark){ & {
     background-color: $header-background-color-dark;
-  }
+  }}
 
   .logo {
     min-height: 1.5em;
@@ -78,9 +78,9 @@ header {
     vertical-align: baseline !important;
     @include transition(width 0.3s ease);
 
-    [theme=dark] & {
+    @media (prefers-color-scheme: dark){ & {
       background-color: $header-background-color-dark;
-    }
+    }}
   }
 
   @include placeholder(transparent);
@@ -112,23 +112,23 @@ header {
       padding: 0 2rem 0 2rem;
     }
 
-    [theme=dark] & {
+    @media (prefers-color-scheme: dark){ & {
       input {
         color: $global-font-color-dark;
         background-color: $search-background-color-dark;
       }
 
       @include placeholder($global-font-secondary-color-dark);
-    }
+    }}
 
     @include placeholder($global-font-secondary-color);
 
     .search-button {
       color: $global-font-secondary-color;
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){ & {
         color: $global-font-secondary-color-dark;
-      }
+      }}
     }
 
     .search-clear:hover {
@@ -176,9 +176,9 @@ header {
         &.delimiter {
           border-left: 1.5px solid $global-font-color;
 
-          [theme=dark] & {
+          @media (prefers-color-scheme: dark){ & {
             border-left-color: $global-border-color-dark;
-          }
+          }}
         }
 
         &.language {
@@ -194,9 +194,9 @@ header {
         font-weight: 900;
         color: $header-hover-color;
 
-        [theme=dark] & {
+        @media (prefers-color-scheme: dark){ & {
           color: $header-hover-color-dark;
-        }
+        }}
       }
     }
   }
@@ -247,9 +247,9 @@ header {
           @include border-radius(3px);
           @include transition(all 0.3s ease-in-out);
 
-          [theme=dark] & {
+          @media (prefers-color-scheme: dark){ & {
             background: $global-font-color-dark;
-          }
+          }}
         }
 
         span:nth-child(1) {
@@ -319,10 +319,10 @@ header {
         display: block;
       }
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){ & {
         background: $header-background-color-dark;
         border-top-color: $global-border-color-dark;
-      }
+      }}
     }
   }
 
@@ -366,9 +366,9 @@ header {
     right: 0 !important;
     background-color: $global-background-color;
 
-    [theme=dark] & {
+    @media (prefers-color-scheme: dark){ & {
       background-color: $global-background-color-dark;
-    }
+    }}
 
     .suggestions {
       overflow-y: auto;
@@ -393,9 +393,9 @@ header {
           text-align: right;
           color: $global-font-secondary-color;
 
-          [theme=dark] & {
+          @media (prefers-color-scheme: dark){ & {
             color: $global-font-secondary-color-dark;
-          }
+          }}
         }
 
         .suggestion-context {
@@ -407,26 +407,26 @@ header {
           @include overflow-wrap(break-word);
           color: $global-font-secondary-color;
 
-          [theme=dark] & {
+          @media (prefers-color-scheme: dark){ & {
             color: $global-font-secondary-color-dark;
-          }
+          }}
         }
 
         em {
           font-style: normal;
           background-color: $selection-color;
 
-          [theme=dark] & {
+          @media (prefers-color-scheme: dark){ & {
             background-color: $selection-color-dark;
-          }
+          }}
         }
 
         &.cursor {
           background: darken($code-background-color, 5%);
 
-          [theme=dark] & {
+          @media (prefers-color-scheme: dark){ & {
             background: lighten($code-background-color-dark, 5%);
-          }
+          }}
         }
 
         &:hover {
@@ -442,9 +442,9 @@ header {
       .search-query {
         font-weight: bold;
 
-        [theme=dark] & {
+        @media (prefers-color-scheme: dark){ & {
           color: #ddd;
-        }
+        }}
       }
     }
 
@@ -454,7 +454,7 @@ header {
       font-size: .8rem;
       color: $global-font-secondary-color;
 
-      [theme=dark] {
+      @media (prefers-color-scheme: dark) {
         color: $global-font-secondary-color-dark;
       }
 

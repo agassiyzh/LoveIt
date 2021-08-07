@@ -59,9 +59,9 @@
       padding: .5rem;
       color: $global-font-secondary-color;
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){ & {
         color: $global-font-secondary-color-dark;
-      }
+      }}
     }
   }
 }
@@ -82,10 +82,10 @@
     color: $global-font-color;
     border-bottom: 1px dashed $global-border-color;
 
-    [theme=dark] & {
+    @media (prefers-color-scheme: dark){ & {
       color: $global-font-color-dark;
       border-bottom: 1px dashed $global-border-color-dark;
-    }
+    }}
 
     .featured-image-preview {
       width: 100%;
@@ -119,18 +119,20 @@
     }
 
     .content {
+      
       @include box(vertical);
       -webkit-line-clamp: 3;
       margin-top: .3rem;
       width: 100%;
+      display: block;
       overflow: hidden;
       text-overflow: ellipsis;
       @include overflow-wrap(break-word);
       color: $global-font-secondary-color;
 
-      [theme=dark] & {
+      @media (prefers-color-scheme: dark){ & {
         color: $global-font-secondary-color-dark;
-      }
+      }}
 
       h2,
       h3,
@@ -157,10 +159,12 @@
       b, strong {
         color: $global-font-secondary-color;
 
-        [theme=dark] & {
+        @media (prefers-color-scheme: dark){ & {
           color: $global-font-secondary-color-dark;
-        }
+        }}
       }
+
+      @import "../_partial/_single/blockquote";
     }
 
     .post-footer {
